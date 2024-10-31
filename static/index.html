@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi there :)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="realtimeClock()">
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html"><img src="images/dark-logo.png" alt="Logo in form of cloud."><img src="images/logo.png" alt="Logo in form of cloud."></a>
+            </div>
+            <nav class="navbar">
+                <div class="links-container">
+                    <a href="about.html">about</a>
+                    <a href="social.html">aitu</a>
+                </div>
+            </nav>
+            <div class="auth">
+                <button id="show-login">log in</button>
+                <button id="show-signup">sign up</button>
+                <button class="theme-switch" id="theme-switch">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="side-text left">
+                <h1 class="h1">Oh, it's <span class="highlighted-text h1">you</span> again?</h1>
+                <p>Welcome back to my personal page, which is solely dedicated to me.</p>
+            </div>
+            <div class="side-text right">
+                <p>Here it is the time of the day:</p>
+                <div class="h1" id="clock"></div>
+            </div>
+        </div>
+        
+        <div class="misc-container">
+            <p>click on any tab in navbar and learn more about me</p>
+        </div>
+    </main>
+
+    <div class="popup login">
+        <div class="close-btn"><span>&times;</span></div>
+        <div class="form">
+            <h2>log in</h2>
+            <p id="login-error-message"></p>
+            <form id="login-form" class="login-form">
+                <div class="form-element">
+                    <label for="username">username</label>
+                    <input type="text" id="login-username-input" name="username" placeholder="enter username">
+                </div>
+                <div class="form-element">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="login-password-input" placeholder="enter password">
+                </div>
+                <button type="submit">sign-in</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup signup">
+        <div class="close-btn"><span>&times;</span></div>
+        <div class="form">
+            <h2>sign up</h2>
+            <p id="signup-error-message"></p>
+            <form id="signup-form" class="signup-form">
+                <div class="form-element">
+                    <label for="username">username</label>
+                    <input type="text" id="signup-username-input" name="username" placeholder="enter username">
+                </div>
+                <div class="form-element">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="signup-password-input" placeholder="enter password">
+                </div>
+                <div class="form-element">
+                    <label for="password">repeat password</label>
+                    <input type="password" name="password-repeat" id="signup-password-repeat-input" placeholder="enter password again">
+                </div>
+                <button type="submit">sign-up</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup user">
+        <div class="close-btn"><span>&times;</span></div>
+    </div>
+
+    <script src="scripts/darkmode.js" defer></script>
+    <script src="scripts/clock.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/signup.js" defer></script>
+    <script src="scripts/login.js" defer></script>
+    <script src="scripts/keyboardhandler.js" defer></script>
+
+    <audio src="sounds/success.mp3" id="success"></audio>
+</body>
+</html>
