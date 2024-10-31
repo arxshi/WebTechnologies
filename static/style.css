@@ -383,6 +383,8 @@ svg {
 }
 
 .aitu-body {
+    background-image: url(images/aitu-bg.jpg);
+    background-blend-mode: soft-light;
     background-color: var(--lighter-bg-color);
 }
 
@@ -409,6 +411,29 @@ svg {
 .aitu-main-container button.active-choice {
     border: var(--primary-color) solid 2px;
     color: var(--primary-color);
+}
+
+.card-container {
+    color: var(--base-color);
+    padding: 50px;
+    border-radius: 30px;
+    align-items: start;
+    justify-content: space-around;
+    display: flex;
+    background-color: var(--bg-color);
+}
+
+.card {
+    margin: 0 20px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    height: 220px;
+    width: 220px;
+    background-color: var(--lighter-bg-color);
 }
 
 .centered {
