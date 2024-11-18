@@ -10,12 +10,15 @@
     <header>
         <div class="header-container">
             <div class="logo-container">
-                <a href="index.html"><img src="images/dark-logo.png" alt="Logo in form of cloud."><img src="images/logo.png" alt="Logo in form of cloud."></a>
+                <a href="index.html">
+                    <img src="images/dark-logo.png" alt="Logo in form of cloud.">
+                    <img src="images/logo.png" alt="Logo in form of cloud.">
+                </a>
             </div>
             <nav class="navbar">
                 <div class="links-container">
                     <a href="about.html">about</a>
-                    <a class="active-tab" href="social.html">aitu</a>
+                    <a href="social.html">aitu</a>
                 </div>
             </nav>
             <div class="auth">
@@ -26,18 +29,27 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
                 </button>
             </div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <main>
+        <div class="aitu-text-container">
+            <h2>This is AITU subjects that i passed.</h2>
+            <p>They can be filtered by year and science type. Just click on filter that you wanna apply.</p>
+        </div>
         <div class="aitu-main-container" id="socials">
             <div class="filter-container">
-                <h2>Select year:</h2>
+                <h2>year</h2>
                 <button id="frst-year-btn" class="filter-btn year">1</button>
                 <button id="scnd-year-btn" class="filter-btn year">2</button>
             </div>
             <div class="filter-container">
-                <h2>Select type:</h2>
+                <h2>type</h2>
                 <button id="gen-sci-btn" class="filter-btn type">General science</button>
                 <button id="comp-sci-btn" class="filter-btn type">Computer science</button>
                 <button id="math-sci-btn" class="filter-btn type">Mathematics science</button>
@@ -101,6 +113,7 @@
     <script src="scripts/signup.js" defer></script>
     <script src="scripts/login.js" defer></script>
     <script src="scripts/keyboardhandler.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
 
     <audio src="sounds/success.mp3" id="success"></audio>
 </body>
