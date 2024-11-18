@@ -547,7 +547,7 @@ footer {
     cursor: pointer;
     width: 35px;
     height: 35px;
-    background: var(--lighter-bg-color);
+    background: var(--lighter-bg-color);    
     border-radius: 5px;
     z-index: 10;
 }
@@ -592,6 +592,7 @@ footer {
     align-items: center;
     z-index: 9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    
 }
 
 .navbar.active {
@@ -609,6 +610,10 @@ footer {
 
     .navbar.active .links-container {
         display: flex;
+    }
+    
+    .darkmode .navbar.active .links-container a {
+        color: var(--bg-color);
     }
 
     .header-container {
