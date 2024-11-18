@@ -22,7 +22,7 @@ function getSignupErrors(username, pass, repeatPass) {
     let errors = [];
 
     if(username === '' || username == null) {
-        errors.push('email is required');
+        errors.push('username is required');
         signupUsernameInput.parentElement.classList.add('incorrect');
     }
 

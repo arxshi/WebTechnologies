@@ -3,6 +3,9 @@ const form = document.getElementById('login-form')
 const loginBtn = document.getElementById('show-login');
 const signupBtn = document.getElementById('show-signup');
 
+const loginBtnFinal = loginBtn;
+const signupBtnFinal = signupBtn;
+
 const usernameInput = document.getElementById('login-username-input')
 const passInput = document.getElementById('login-password-input')
 
@@ -34,6 +37,11 @@ function createUserPopupComponent(name) {
     });
 }
 
+document.querySelectorAll(".close-btn").forEach(el => {
+    el.addEventListener("click", () => {
+        closePopup(el.parentElement, clearLoginInputs);
+    });
+})
 
 
 function replaceButtons(name) {
@@ -44,12 +52,19 @@ function replaceButtons(name) {
         userPopup.classList.add('active-popup');
     });
     loginBtn.replaceWith(userElm)
+    
+    signupBtnFinal.addEventListener("click", () => {
+        closePopup(userPopup, clearLoginInputs);
+    });
+    loginBtnFinal.addEventListener("click", () => {
+        closePopup(userPopup, clearLoginInputs);
+    });
 
     logoutElm.id = 'logout';
     logoutElm.innerText = 'log out'     
     logoutElm.addEventListener('click', () => {
-        logoutElm.replaceWith(signupBtn);
-        userElm.replaceWith(loginBtn);
+        logoutElm.replaceWith(signupBtnFinal);
+        userElm.replaceWith(loginBtnFinal);
         localStorage.removeItem('active-user');
         location.reload();
     })
@@ -75,12 +90,14 @@ form.addEventListener('submit', (e) => {
     if (user == null) {
         e.preventDefault();
         error_message.innerText = 'user does not exists'
+        usernameInput.parentElement.classList.add('incorrect')
         return;
     }
 
     if(user !== passInput.value) {
         e.preventDefault();
         error_message.innerText = 'wrong password'
+        passInput.parentElement.classList.add('incorrect')
         return;
     }
     
